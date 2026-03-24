@@ -6,7 +6,7 @@ A complete end-to-end machine learning pipeline for real-time fraud detection, b
 This project demonstrates how to go from raw idea to a production-grade REST API for fraud detection — covering data generation, EDA, model training, deployment, and live inference benchmarking.
  What's Built
 ComponentDetailsDataset10,000 synthetic financial transactions (~0.5% fraud rate)ModelXGBoost classifier with ROC-AUC of 0.97DeploymentSnowpark Container Services (SPCS)APILive REST endpoint with ~60ms median latency
-🔧 Pipeline Steps
+ Pipeline Steps
 
 Synthetic Data Generation — Realistic fraud patterns including stealth fraud and noisy legitimate transactions
 Exploratory Data Analysis — Feature correlation analysis, amount distributions, location/merchant patterns
@@ -29,7 +29,7 @@ LOG_AMOUNT               0.1203
 LOC_MERCH_SUSPICIOUS     0.1098
 IS_NIGHT                 0.0812
 HOUR                     0.0698
-🛠️ Tech Stack
+ Tech Stack
 
 Snowflake — Data warehouse, Model Registry, SPCS
 Cortex Code — AI-native coding agent (CLI + Snowsight)
@@ -38,13 +38,13 @@ Snowpark — Python SDK for Snowflake
 REST API — Real-time online inference endpoint
 
  Project Structure
-├── eda_step1_load.py               # Data loading and basic stats
-├── eda_step2_amount.py             # Amount distribution analysis
-├── eda_step3_location_merchant.py  # Location and merchant patterns
-├── eda_step4_time.py               # Time-of-day analysis
-├── eda_step5_features.py           # Feature recommendations
-├── train_fraud_model.py            # XGBoost training script
-├── benchmark_inference.py          # REST API latency profiling
-└── plots/                          # EDA visualizations
+eda_step1_load.py               # Data loading and basic stats
+eda_step2_amount.py             # Amount distribution analysis
+eda_step3_location_merchant.py  # Location and merchant patterns
+eda_step4_time.py               # Time-of-day analysis
+eda_step5_features.py           # Feature recommendations
+train_fraud_model.py            # XGBoost training script
+benchmark_inference.py          # REST API latency profiling
+plots/                          # EDA visualizations
  Based On
 Snowflake ML Quickstart — Real-Time Fraud Detection with Agentic ML
